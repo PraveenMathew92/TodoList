@@ -13,8 +13,18 @@ describe('Form component', () => {
 		expect(component.find('form').exists()).toBeTruthy();
 	});
 
-	it('should contain a input feild inside the form field', () => {
+	it('should contain a input field inside the form field', () => {
 		const component = shallow (<Form />);
 		expect(component.find('form').find('input').exists()).toBeTruthy();
+	});
+
+	it('should contain a input field should have type submit', () => {
+		const component = shallow (<Form />);
+		expect(component.find('form').find('input').prop('type')).toEqual('submit');
+	});
+
+	it('should contain a text area in the field', () => {
+		const component = shallow (<Form />);
+		expect(component.find('form').find('textarea')).toHaveLength(1);
 	});
 });

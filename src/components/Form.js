@@ -6,8 +6,7 @@ class Form extends Component{
 			<div>
 				Form
 				<form>
-					<input>
-					</input>
+					<input type="submit" />
 				</form>
 			</div>
 		);
