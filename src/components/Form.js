@@ -6,6 +6,8 @@ class Form extends Component{
 			<div>
 				Form
 				<form>
+					<input>
+					</input>
 				</form>
 			</div>
 		);

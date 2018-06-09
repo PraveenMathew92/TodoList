@@ -12,4 +12,9 @@ describe('Form component', () => {
 		const component = shallow (<Form />);
 		expect(component.find('form').exists()).toBeTruthy();
 	});
+
+	it('should contain a input feild inside the form field', () => {
+		const component = shallow (<Form />);
+		expect(component.find('form').find('input').exists()).toBeTruthy();
+	});
 });
