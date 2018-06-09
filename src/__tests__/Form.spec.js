@@ -5,6 +5,11 @@ import { shallow } from 'enzyme';
 describe('Form component', () => {
 	it('should display header', () => {
 		const component = shallow(<Form />);
-		expect(component.find('Form')).toBeTruthy();
+		expect(component.text()).toEqual('Form');
+	});
+
+	it('should contain a form field', () => {
+		const component = shallow (<Form />);
+		expect(component.find('form').exists()).toBeTruthy();
 	});
 });
