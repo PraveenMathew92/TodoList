@@ -6,6 +6,8 @@ class Form extends Component{
 			<div>
 				Form
 				<form>
+					<textarea />
+					<br />
 					<input type="submit" />
 				</form>
 			</div>
