@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Form from './components/Form';
+import Form from './containers/Form';
 import { shallow } from 'enzyme';
+import store from './store';
+import { Provider } from 'react-redux';
 
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<Provider store={store}>
+		<App />
+	</Provider>
+	, div);
   ReactDOM.unmountComponentAtNode(div);
 });
 

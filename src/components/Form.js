@@ -5,8 +5,8 @@ class Form extends Component{
 		return(
 			<div>
 				Form
-				<form>
-					<textarea />
+				<form onSubmit={this.props.addTodo}>
+					<textarea/>
 					<br />
 					<input type="submit" />
 				</form>
