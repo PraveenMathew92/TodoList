@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
+import Todo from './Todo'
+
+const displayList = todo => (
+	todo?
+	(todo.map((element) => (
+		<Todo text={element} />
+	))):
+	null
+)
 
 class Display extends Component{
 	render(){
 		return(
-			<div>
-			{this.props.todo}
-			</div>
+			<ul>
+			{displayList(this.props.todo)}
+			</ul>
 		);
 	}
 }
