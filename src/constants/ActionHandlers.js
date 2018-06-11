@@ -1,5 +1,9 @@
 import * as type from './ActionTypes';
 
 export const actionHandlers = {
-	[type.ADD_TODO] : (state, action) => ({todo: [action.text]})
+	[type.ADD_TODO] : (state, action) => {
+		return (state.todo)?
+		{todo:[...state.todo, action.text]}:
+		{todo: [action.text]}
+	}
 }

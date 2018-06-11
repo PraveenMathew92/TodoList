@@ -14,4 +14,13 @@ describe('form reducer', () => {
 		const expectedState = {todo: ['a new todo']};
 		expect(createReducer(initialState)(initialState, action)).toEqual(expectedState);
 	});
+
+	it('should add the second todo to the list', () =>{
+		const initialState = [];
+		const action = actions.addTodo('second todo');
+		const state = createReducer()({todo: ['a new todo']}, action);
+
+		const expectedState = {todo: ['a new todo', 'second todo']};
+		expect(state).toEqual(expectedState);
+	});
 });
