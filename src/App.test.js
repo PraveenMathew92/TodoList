@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import Form from './containers/Form';
+import Display from './containers/Display';
 import { shallow } from 'enzyme';
 import store from './store';
 import { Provider } from 'react-redux';
@@ -20,6 +21,12 @@ describe('App component', () => {
 	it('should render form component', () => {
 		const component = shallow(<App />);
 		const childComponent = component.find(Form);
+		expect(childComponent).toHaveLength(1);
+	});
+
+	it('should render display component', () => {
+		const component = shallow(<App />);
+		const childComponent = component.find(Display);
 		expect(childComponent).toHaveLength(1);
 	});
 });

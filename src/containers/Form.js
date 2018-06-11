@@ -2,12 +2,6 @@ import { connect } from 'react-redux';
 import Form from './../components/Form';
 import * as action from './../actions/Form';
 
-const mapStateToProps = state => {
-	return{
-		value: state.todo
-	}
-}
-
 const mapDispatchToProps = dispatch => ({
 	addTodo: event => {
 		event.preventDefault();
@@ -15,4 +9,4 @@ const mapDispatchToProps = dispatch => ({
 	}
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Form)
+export default connect(null, mapDispatchToProps)(Form)

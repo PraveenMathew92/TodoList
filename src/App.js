@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Form from './containers/Form';
+import Display from './containers/Display';
 
 class App extends Component {
 
@@ -9,6 +10,7 @@ class App extends Component {
     return (
       <div>
         <Form />
+        <Display />
       </div>
     );
   }
