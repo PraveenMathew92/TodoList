@@ -11,16 +11,16 @@ describe('form reducer', () => {
 		const initialState = [];
 		const action = actions.addTodo('a new todo');
 
-		const expectedState = {todo: ['a new todo']};
+		const expectedState = {todo: [{text: 'a new todo', star: 0}]};
 		expect(createReducer(initialState)(initialState, action)).toEqual(expectedState);
 	});
 
 	it('should add the second todo to the list', () =>{
 		const initialState = [];
 		const action = actions.addTodo('second todo');
-		const state = createReducer()({todo: ['a new todo']}, action);
+		const state = createReducer()({todo: [{text: 'a new todo', star: 0}]}, action);
 
-		const expectedState = {todo: ['a new todo', 'second todo']};
+		const expectedState = {todo: [{text: 'a new todo', star: 0}, {text: 'second todo', star: 0}]};
 		expect(state).toEqual(expectedState);
 	});
 });
