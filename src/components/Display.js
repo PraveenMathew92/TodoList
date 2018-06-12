@@ -4,7 +4,7 @@ import Todo from './Todo'
 const displayList = todo => (
 	todo?
 	(todo.map((element) => (
-		<Todo text={element.text} />
+		<Todo todo={element} />
 	))):
 	null
 )

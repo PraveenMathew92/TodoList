@@ -5,8 +5,8 @@ class Todo extends Component{
 	render(){
 		return(
 			<div>
-				{this.props.text}
-				<StarRating rating={this.props.star} />
+				{this.props.todo.text} 
+				<StarRating rating={this.props.todo.star} />
 			</div>
 		)
 	}
