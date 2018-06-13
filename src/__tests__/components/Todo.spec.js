@@ -1,6 +1,6 @@
 import React from 'react';
 import Todo from './../../components/Todo';
-import StarRating from './../../components/StarRating';
+import StarRating from './../../containers/StarRating';
 import { shallow } from 'enzyme';
 
 describe('Todo Component', () =>{

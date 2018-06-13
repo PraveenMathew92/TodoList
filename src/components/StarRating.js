@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 
-const starDisplay = rating =>{
+const starDisplay = (rating, updateStar) =>{
 	let stars = [ ];
-	let i;
-	for(i = 0; i < 5; i++){
-		stars.push(<i class="fa fa-star-o" />)
+	for(let i = 0; i < 5; i++){
+		const starValue = i + 1;
+		stars.push(<i className={(starValue <= rating)?"fa fa-star":"fa fa-star-o"}
+			onClick={() => (updateStar(starValue))} />)
 	}
 	return stars;
 }
@@ -13,7 +14,7 @@ class StarRating extends Component{
 	render(){
 		return(
 			<div>
-			{starDisplay(this.props.rating)}
+			{starDisplay(this.props.rating, this.props.updateStar)}
 			</div>
 		)
 	}

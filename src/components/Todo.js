@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import StarRating from './StarRating';
+import StarRating from './../containers/StarRating';
 
 class Todo extends Component{
 	render(){
 		return(
 			<div>
 				{this.props.todo.text} 
-				<StarRating rating={this.props.todo.star} />
+				<StarRating index={this.props.index}/>
 			</div>
 		)
 	}

@@ -3,8 +3,8 @@ import Todo from './Todo'
 
 const displayList = todo => (
 	todo?
-	(todo.map((element) => (
-		<Todo todo={element} />
+	(todo.map((element, index) => (
+		<Todo todo={element} index={index}/>
 	))):
 	null
 )
