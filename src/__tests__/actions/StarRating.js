@@ -7,7 +7,7 @@ describe('star rating actions', () =>{
     const star = 4;
     const expectedAction = {
       type : type.UPDATE_STAR,
-      id : 2,
+      index : 2,
       star : 4
     }
     expect(actions.updateStar(id, star)).toEqual(expectedAction)

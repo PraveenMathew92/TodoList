@@ -1,7 +1,7 @@
 import * as type from './../constants/ActionTypes';
 
-export const updateStar = (id, star) => ({
+export const updateStar = (index, star) => ({
 	type: type.UPDATE_STAR,
-	id: id,
+	index: index,
 	star: star
 });
