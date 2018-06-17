@@ -1,8 +1,9 @@
 import Display from './../components/Display';
 import { connect } from 'react-redux';
+import * as selectors from '../selectors/selectors';
 
 const mapStateToProps = state =>({
-	todo: state.todo
+	todo: selectors.todolist(state)
 	}
 )
 
