@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import StarRating from './../components/StarRating';
 import * as action from './../actions/StarRating';
+import * as selectors from '../selectors/selectors';
 
 const mapStateToProps = (state, ownprops) => ({
-	rating: state.todo[ownprops.index].star,
+	rating: selectors.ratings(state, ownprops),
 	index: ownprops.index
 })
 
