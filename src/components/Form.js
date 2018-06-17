@@ -4,7 +4,7 @@ class Form extends Component{
 	render() {
 		return(
 			<div>
-				Form
+				Todo
 				<form onSubmit={this.props.addTodo}>
 					<textarea/>
 					<br />

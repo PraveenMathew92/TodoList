@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 describe('Form component', () => {
 	it('should display header', () => {
 		const component = shallow(<Form />);
-		expect(component.text()).toEqual('Form');
+		expect(component.text()).toEqual('Todo');
 	});
 
 	it('should contain a form field', () => {
