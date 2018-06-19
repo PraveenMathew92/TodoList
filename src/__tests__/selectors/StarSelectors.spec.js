@@ -16,8 +16,6 @@ describe('Star selectors', ()=>{
 	});
 
 	it('should return all empty stars for a zero star rating', ()=>{
-		const ownprops = {index: 0};
-		const state = {todo: [{star: 0}]};
 		const component = mount(<div> { starDisplay(0, randomFunction) } </div>);
 		component.find('i').forEach((node) =>{
 			expect(node.hasClass(SOLID_STAR_CLASS)).toBeFalsy();
@@ -25,8 +23,6 @@ describe('Star selectors', ()=>{
 	});
 
 	it('should return all solid stars for a five star rating', ()=>{
-		const ownprops = {index: 0};
-		const state = {todo: [{star: 5}]};
 		const component = mount(<div> { starDisplay(5, randomFunction) } </div>);
 		component.find('i').forEach((node) =>{
 			expect(node.hasClass(EMPTY_STAR_CLASS)).toBeFalsy();
