@@ -12,7 +12,8 @@ const starDisplay = (rating, updateStar) =>{
 				(starValue <= rating)? SOLID_STAR_CLASS: EMPTY_STAR_CLASS 
 			}
 			style={{color: STAR_COLOR}}
-			onClick={() => (updateStar(starValue))} />)
+			onClick={() => (updateStar(starValue))} 
+			key={starValue.toString()}/>)
 		}
 	return stars;
 }
