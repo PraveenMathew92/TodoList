@@ -1,12 +1,13 @@
 import React,  {Component} from 'react';
+import './../Form.css'
 
 class Form extends Component{
 	render() {
 		return(
-			<div>
-				Todo
+			<div id="form">
+				<h1>Todo</h1>
 				<form onSubmit={this.props.addTodo}>
-					<textarea/>
+					<textarea placeholder="addTodo"/>
 					<br />
 					<input type="submit" />
 				</form>

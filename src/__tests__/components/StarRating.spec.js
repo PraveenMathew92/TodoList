@@ -2,9 +2,10 @@ import React from 'react';
 import StarRating from './../../components/StarRating';
 import { shallow } from 'enzyme';
 
-describe('Star Rating Component', () =>{
+xdescribe('Star Rating Component', () =>{
 	it('should display zero stars', ()=>{
-		const component = shallow(<StarRating rating={'0'}/>);
+		const component = shallow(<StarRating rating={'0'} />);
+		expect(component).toBeFalsy();
 		expect(component.contains(<i class="fa fa-star-o" />)).toBeTruthy();
 	});
 
