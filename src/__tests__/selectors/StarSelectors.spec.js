@@ -1,4 +1,4 @@
-import starDisplay from './../../selectors/StarSelectors';
+import { starDisplay, ratings } from './../../selectors/StarSelectors';
 import React from 'react';
 import { mount } from 'enzyme';
 
@@ -9,6 +9,12 @@ const STAR_COLOR = "orange";
 const randomFunction = () => (0);
 
 describe('Star selectors', ()=>{
+	it('should select ratings from state', () =>{
+		const ownprops = {index: 0};
+		const state = {todo: [{star: 5}, {star: 4}]};
+		expect(ratings(state, ownprops)).toEqual(5);
+	});
+
 	it('should return an array of five', ()=>{
 		const ownprops = {index: 0};
 		const state = {todo: [{star: 5}]};

@@ -5,7 +5,11 @@ const EMPTY_STAR_CLASS = "fa fa-star-o";
 const SOLID_STAR_CLASS = "fa fa-star";
 const STAR_COLOR = "orange";
 
-const starDisplay = (rating, updateStar) =>{
+export const ratings = (state, ownprops) => (
+	state.todo[ownprops.index].star
+)
+
+export const starDisplay = (rating, updateStar) =>{
 	let stars = [];
 		for(let starValue = 1; starValue <= NUMBER_OF_STARS; starValue++){
 			stars.push(<i className={
@@ -17,5 +21,3 @@ const starDisplay = (rating, updateStar) =>{
 		}
 	return stars;
 }
-
-export default starDisplay;
