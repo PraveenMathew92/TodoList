@@ -1,4 +1,4 @@
-import { createReducer } from './../../reducers/Form';
+import { createReducer } from './../../reducers/createReducer';
 import * as actions from './../../actions/StarRating';
 
 describe('star rating reducer', () => {

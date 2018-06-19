@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import {createReducer} from './reducers/Form';
+import {createReducer} from './reducers/createReducer';
 
 const store = createStore(createReducer(),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
